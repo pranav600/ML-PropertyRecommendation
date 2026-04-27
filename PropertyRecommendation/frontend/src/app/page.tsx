@@ -43,7 +43,7 @@ export default function Home() {
   const itemsPerPage = 12; // 4 columns * 3 rows
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/options")
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/options`)
       .then(res => res.json())
       .then(data => {
         setOptions(data);
@@ -64,7 +64,7 @@ export default function Home() {
     setSearched(true);
     setSearchId(Date.now());
     try {
-      const res = await fetch("http://localhost:8000/api/recommend", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/recommend`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
