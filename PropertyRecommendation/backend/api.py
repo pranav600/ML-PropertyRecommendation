@@ -78,6 +78,18 @@ class PropertyResponse(BaseModel):
     Latitude: float
     Longitude: float
 
+@app.get("/")
+def root():
+    return {
+        "status": "ok",
+        "app": "PropFind - Property Recommendation API",
+        "version": "1.0.0",
+        "endpoints": {
+            "options": "/api/options",
+            "recommend": "/api/recommend"
+        }
+    }
+
 @app.get("/api/options")
 def get_options():
     cities = sorted(data["City_name"].dropna().unique().tolist())
