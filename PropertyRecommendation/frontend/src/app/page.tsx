@@ -25,6 +25,22 @@ interface Property {
   Longitude: number;
 }
 
+// Curated Unsplash property image IDs for stable, high-quality visuals
+const PROPERTY_IMAGES = [
+  "photo-1600585154340-be6161a56a0c",
+  "photo-1600596542815-ffad4c1539a9",
+  "photo-1600607687940-47a0f9259d17",
+  "photo-1600566753376-12c8ab7fb75b",
+  "photo-1600585154526-990dcea4ee50",
+  "photo-1600047509807-ba8f99d2cdde",
+  "photo-1600573472591-ee6b68d14c68",
+  "photo-1602343168117-bb89412989d5",
+  "photo-1605276374104-dee2a0ed3cd6",
+  "photo-1600566753190-17f0bcd0a6d4",
+  "photo-1512917774080-9991f1c4c750",
+  "photo-1613490493576-7fde63acd811",
+];
+
 export default function Home() {
   const [options, setOptions] = useState<Options>({ cities: [], property_types: [], bhks: [] });
   const [loadingOptions, setLoadingOptions] = useState(true);
@@ -204,12 +220,11 @@ export default function Home() {
                   
                   <div className="relative h-48 bg-[var(--color-secondary)]/20 overflow-hidden">
                     <img 
-                      src={`https://loremflickr.com/800/600/house,mansion?random=${searchId + (currentPage - 1) * itemsPerPage + idx}`} 
+                      src={`https://images.unsplash.com/${PROPERTY_IMAGES[(searchId + (currentPage - 1) * itemsPerPage + idx) % PROPERTY_IMAGES.length]}?auto=format&fit=crop&w=800&q=80`} 
                       alt="Property" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       onError={(e) => {
-                         e.currentTarget.style.display = 'none';
-                         e.currentTarget.parentElement!.classList.add('bg-gradient-to-tr', 'from-[var(--color-primary)]', 'to-[var(--color-secondary)]');
+                         e.currentTarget.src = 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80';
                       }}
                     />
                     <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full">
