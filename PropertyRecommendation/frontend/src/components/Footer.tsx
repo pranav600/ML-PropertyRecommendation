@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Home } from "lucide-react";
+import { Home, Github, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -42,7 +42,29 @@ export function Footer() {
       
       <div className="container mx-auto px-4 mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between text-xs text-foreground/50">
         <p>&copy; {new Date().getFullYear()} PropFind. All rights reserved.</p>
-        <p className="mt-2 md:mt-0">Developed by Pranav.</p>
+        <div className="flex items-center gap-4 mt-2 md:mt-0">
+          <p>Developed by Pranav.</p>
+          <div className="flex items-center gap-3 ml-2">
+            <a 
+              href={process.env.NEXT_PUBLIC_GITHUB_URL} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-[var(--color-primary)] transition-colors"
+              aria-label="GitHub"
+            >
+              <Github size={16} />
+            </a>
+            <a 
+              href={process.env.NEXT_PUBLIC_LINKEDIN_URL} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-[var(--color-primary)] transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={16} />
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
