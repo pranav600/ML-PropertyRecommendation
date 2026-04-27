@@ -11,8 +11,8 @@ export function Footer() {
               <Home size={18} />
             </div>
             <span className="font-bold text-lg">
-              Property
-              <span className="text-[var(--color-primary)]">Recommendation</span>
+              Prop
+              <span className="text-[var(--color-primary)]">Find</span>
             </span>
           </Link>
           <p className="text-sm text-foreground/70 max-w-sm">
@@ -41,7 +41,7 @@ export function Footer() {
       </div>
       
       <div className="container mx-auto px-4 mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between text-xs text-foreground/50">
-        <p>&copy; {new Date().getFullYear()} Property Recommendation. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} PropFind. All rights reserved.</p>
         <p className="mt-2 md:mt-0">Developed by Pranav.</p>
       </div>
     </footer>

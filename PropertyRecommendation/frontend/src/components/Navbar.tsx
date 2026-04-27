@@ -16,9 +16,9 @@ export function Navbar() {
             <Home size={20} />
           </div>
           <span className="font-bold text-xl tracking-tight">
-            Property
+            Prop
             <span className="text-[var(--color-primary)]">
-              Recommendation
+              Find
             </span>
           </span>
         </Link>

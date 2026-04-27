@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Luxoro Estates | AI Property Recommendations",
-  description: "Find your dream property with AI-powered price predictions and personalized recommendations.",
+  title: "PropFind | AI-Powered Property Recommendations",
+  description: "Find your perfect property with PropFind — AI-powered price predictions and personalized recommendations across India.",
 };
 
 export default function RootLayout({
