@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { BackendStatusBanner } from "@/components/BackendStatusBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PropFind | AI-Powered Property Recommendations",
+  title: "PropFind",
   description: "Find your perfect property with PropFind — AI-powered price predictions and personalized recommendations across India.",
 };
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col relative`}
       >
         <ThemeProvider>
+          <BackendStatusBanner />
           <Navbar />
           <main className="flex-1">
             {children}
