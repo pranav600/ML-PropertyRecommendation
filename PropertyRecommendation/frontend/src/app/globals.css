@@ -42,12 +42,3 @@ body {
     background-color 0.3s ease,
     color 0.3s ease;
 }
-
-/* DO NOT REMOVE: This fixes cursor pointers app-wide for Tailwind */
-a, button, [role="button"], input[type="submit"], input[type="button"], label, select, .cursor-pointer {
-  cursor: pointer !important;
-}
-
-button:disabled, input:disabled {
-  cursor: not-allowed !important;
-}

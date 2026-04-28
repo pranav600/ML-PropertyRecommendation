@@ -166,7 +166,7 @@ export function BackendStatusBanner() {
               <button
                 onClick={handleDismiss}
                 aria-label="Dismiss notification"
-                className="shrink-0 p-1.5 rounded-lg hover:bg-white/10 text-foreground/50 hover:text-foreground transition-colors"
+                className="shrink-0 p-1.5 rounded-lg hover:bg-white/10 text-foreground/50 hover:text-foreground transition-colors cursor-pointer [&_*]:cursor-pointer"
               >
                 <X size={14} />
               </button>

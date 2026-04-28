@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="w-full border-t border-border bg-[var(--color-lightbg)]/50 dark:bg-black/50 py-12 mt-20 transition-colors duration-300">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="space-y-4 col-span-1 md:col-span-2">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2 cursor-pointer [&_*]:cursor-pointer">
             <div className="p-1.5 bg-[var(--color-primary)] rounded-md text-white">
               <Home size={18} />
             </div>
@@ -31,28 +31,28 @@ export function Footer() {
             <li>
               <Link
                 href="/"
-                className="hover:text-[var(--color-primary)] transition-colors">
+                className="hover:text-[var(--color-primary)] transition-colors cursor-pointer [&_*]:cursor-pointer">
                 Home
               </Link>
             </li>
             <li>
               <Link
                 href="#search"
-                className="hover:text-[var(--color-primary)] transition-colors">
+                className="hover:text-[var(--color-primary)] transition-colors cursor-pointer [&_*]:cursor-pointer">
                 Find Property
               </Link>
             </li>
             <li>
               <Link
                 href="#"
-                className="hover:text-[var(--color-primary)] transition-colors">
+                className="hover:text-[var(--color-primary)] transition-colors cursor-pointer [&_*]:cursor-pointer">
                 About Us
               </Link>
             </li>
             <li>
               <Link
                 href="#"
-                className="hover:text-[var(--color-primary)] transition-colors">
+                className="hover:text-[var(--color-primary)] transition-colors cursor-pointer [&_*]:cursor-pointer">
                 Contact
               </Link>
             </li>
@@ -67,21 +67,21 @@ export function Footer() {
             <li>
               <Link
                 href="#"
-                className="hover:text-[var(--color-primary)] transition-colors">
+                className="hover:text-[var(--color-primary)] transition-colors cursor-pointer [&_*]:cursor-pointer">
                 Privacy Policy
               </Link>
             </li>
             <li>
               <Link
                 href="#"
-                className="hover:text-[var(--color-primary)] transition-colors">
+                className="hover:text-[var(--color-primary)] transition-colors cursor-pointer [&_*]:cursor-pointer">
                 Terms of Service
               </Link>
             </li>
             <li>
               <Link
                 href="#"
-                className="hover:text-[var(--color-primary)] transition-colors">
+                className="hover:text-[var(--color-primary)] transition-colors cursor-pointer [&_*]:cursor-pointer">
                 Cookie Policy
               </Link>
             </li>
@@ -99,7 +99,7 @@ export function Footer() {
                 href={process.env.NEXT_PUBLIC_GITHUB_URL} 
                 target="_blank" 
                 rel="noreferrer"
-                className="hover:text-[var(--color-primary)] transition-colors"
+                className="hover:text-[var(--color-primary)] transition-colors cursor-pointer [&_*]:cursor-pointer"
                 aria-label="GitHub"
               >
                 <FaGithub size={20} />
@@ -110,7 +110,7 @@ export function Footer() {
                 href={process.env.NEXT_PUBLIC_LINKEDIN_URL} 
                 target="_blank" 
                 rel="noreferrer"
-                className="hover:text-[var(--color-primary)] transition-colors"
+                className="hover:text-[var(--color-primary)] transition-colors cursor-pointer [&_*]:cursor-pointer"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={20} />

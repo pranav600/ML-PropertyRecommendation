@@ -138,7 +138,7 @@ export default function Home() {
                 </label>
                 <select 
                   value={city} onChange={(e) => setCity(e.target.value)}
-                  className="w-full bg-transparent border border-[var(--color-border)] rounded-lg p-3 text-sm outline-none focus:border-[var(--color-primary)] transition-colors appearance-none cursor-pointer"
+                  className="w-full bg-transparent border border-[var(--color-border)] rounded-lg p-3 text-sm outline-none focus:border-[var(--color-primary)] transition-colors appearance-none cursor-pointer [&_*]:cursor-pointer"
                   disabled={loadingOptions}
                 >
                   {options.cities.map(c => <option key={c} value={c}>{c}</option>)}
@@ -151,7 +151,7 @@ export default function Home() {
                 </label>
                 <select 
                   value={propertyType} onChange={(e) => setPropertyType(e.target.value)}
-                  className="w-full bg-transparent border border-[var(--color-border)] rounded-lg p-3 text-sm outline-none focus:border-[var(--color-primary)] transition-colors appearance-none cursor-pointer"
+                  className="w-full bg-transparent border border-[var(--color-border)] rounded-lg p-3 text-sm outline-none focus:border-[var(--color-primary)] transition-colors appearance-none cursor-pointer [&_*]:cursor-pointer"
                   disabled={loadingOptions}
                 >
                   {options.property_types.map(pt => <option key={pt} value={pt}>{pt}</option>)}
@@ -164,7 +164,7 @@ export default function Home() {
                 </label>
                 <select 
                   value={bhk} onChange={(e) => setBhk(e.target.value)}
-                  className="w-full bg-transparent border border-[var(--color-border)] rounded-lg p-3 text-sm outline-none focus:border-[var(--color-primary)] transition-colors appearance-none cursor-pointer"
+                  className="w-full bg-transparent border border-[var(--color-border)] rounded-lg p-3 text-sm outline-none focus:border-[var(--color-primary)] transition-colors appearance-none cursor-pointer [&_*]:cursor-pointer"
                   disabled={loadingOptions}
                 >
                   {options.bhks.map(b => <option key={b} value={b}>{b}</option>)}
@@ -187,7 +187,7 @@ export default function Home() {
                 <button 
                   type="submit" 
                   disabled={loadingSearch || loadingOptions}
-                  className="w-full bg-[var(--color-primary)] hover:bg-[var(--color-accent)] text-white font-semibold rounded-lg p-3 transition-colors flex items-center justify-center gap-2 h-[46px] cursor-pointer"
+                  className="w-full bg-[var(--color-primary)] hover:bg-[var(--color-accent)] text-white font-semibold rounded-lg p-3 transition-colors flex items-center justify-center gap-2 h-[46px] cursor-pointer [&_*]:cursor-pointer"
                 >
                   {loadingSearch ? <Loader2 size={18} className="animate-spin" /> : <><Search size={18} /> Search</>}
                 </button>
@@ -216,7 +216,7 @@ export default function Home() {
           ) : results.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {results.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage).map((property, idx) => (
-                <div key={idx} className="group bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl overflow-hidden hover:shadow-2xl hover:border-[var(--color-primary)]/50 transition-all duration-300 flex flex-col cursor-pointer">
+                <div key={idx} className="group bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl overflow-hidden hover:shadow-2xl hover:border-[var(--color-primary)]/50 transition-all duration-300 flex flex-col cursor-pointer [&_*]:cursor-pointer">
                   
                   <div className="relative h-48 bg-[var(--color-secondary)]/20 overflow-hidden">
                     <img 
@@ -269,7 +269,7 @@ export default function Home() {
                         href={`https://www.google.com/maps?q=${property.Latitude},${property.Longitude}`} 
                         target="_blank" 
                         rel="noreferrer"
-                        className="w-full flex items-center justify-center gap-2 bg-transparent border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white font-medium py-2.5 rounded-lg transition-colors cursor-pointer"
+                        className="w-full flex items-center justify-center gap-2 bg-transparent border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white font-medium py-2.5 rounded-lg transition-colors cursor-pointer [&_*]:cursor-pointer"
                       >
                         <MapPin size={16} /> View on Map
                       </a>
@@ -293,7 +293,7 @@ export default function Home() {
                   setCurrentPage(prev => prev === 1 ? Math.ceil(results.length / itemsPerPage) : prev - 1);
                   setTimeout(() => document.getElementById("results")?.scrollIntoView({ behavior: "smooth" }), 50);
                 }}
-                className="p-2 rounded-full border border-[var(--color-border)] bg-[var(--color-card)] hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)] transition-colors cursor-pointer"
+                className="p-2 rounded-full border border-[var(--color-border)] bg-[var(--color-card)] hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)] transition-colors cursor-pointer [&_*]:cursor-pointer"
                 aria-label="Previous Page"
               >
                 <ChevronLeft size={24} />
@@ -306,7 +306,7 @@ export default function Home() {
                   setCurrentPage(prev => prev === Math.ceil(results.length / itemsPerPage) ? 1 : prev + 1);
                   setTimeout(() => document.getElementById("results")?.scrollIntoView({ behavior: "smooth" }), 50);
                 }}
-                className="p-2 rounded-full border border-[var(--color-border)] bg-[var(--color-card)] hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)] transition-colors cursor-pointer"
+                className="p-2 rounded-full border border-[var(--color-border)] bg-[var(--color-card)] hover:bg-[var(--color-primary)] hover:text-white hover:border-[var(--color-primary)] transition-colors cursor-pointer [&_*]:cursor-pointer"
                 aria-label="Next Page"
               >
                 <ChevronRight size={24} />
