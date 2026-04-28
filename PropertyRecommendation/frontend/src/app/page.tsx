@@ -216,7 +216,7 @@ export default function Home() {
           ) : results.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {results.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage).map((property, idx) => (
-                <div key={idx} className="group bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl overflow-hidden hover:shadow-2xl hover:border-[var(--color-primary)]/50 transition-all duration-300 flex flex-col">
+                <div key={idx} className="group bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl overflow-hidden hover:shadow-2xl hover:border-[var(--color-primary)]/50 transition-all duration-300 flex flex-col cursor-pointer">
                   
                   <div className="relative h-48 bg-[var(--color-secondary)]/20 overflow-hidden">
                     <img 
@@ -269,7 +269,7 @@ export default function Home() {
                         href={`https://www.google.com/maps?q=${property.Latitude},${property.Longitude}`} 
                         target="_blank" 
                         rel="noreferrer"
-                        className="w-full flex items-center justify-center gap-2 bg-transparent border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white font-medium py-2.5 rounded-lg transition-colors"
+                        className="w-full flex items-center justify-center gap-2 bg-transparent border border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white font-medium py-2.5 rounded-lg transition-colors cursor-pointer"
                       >
                         <MapPin size={16} /> View on Map
                       </a>

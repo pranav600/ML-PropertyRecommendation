@@ -3,21 +3,21 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #FDFBD4;
+  --background: #fdfbd4;
   --foreground: #1a1a1a;
-  --color-primary: #D4AF37;
-  --color-secondary: #BDB76B;
-  --color-accent: #CE8946;
+  --color-primary: #d4af37;
+  --color-secondary: #bdb76b;
+  --color-accent: #ce8946;
   --color-card: #ffffff;
   --color-border: #e2e8f0;
 }
 
 .dark {
   --background: #121212;
-  --foreground: #FDFBD4;
-  --color-primary: #D4AF37;
-  --color-secondary: #BDB76B;
-  --color-accent: #CE8946;
+  --foreground: #fdfbd4;
+  --color-primary: #d4af37;
+  --color-secondary: #bdb76b;
+  --color-accent: #ce8946;
   --color-card: #1f1f1f;
   --color-border: #333333;
 }
@@ -38,5 +38,16 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* DO NOT REMOVE: This fixes cursor pointers app-wide for Tailwind */
+a, button, [role="button"], input[type="submit"], input[type="button"], label, select, .cursor-pointer {
+  cursor: pointer !important;
+}
+
+button:disabled, input:disabled {
+  cursor: not-allowed !important;
 }
